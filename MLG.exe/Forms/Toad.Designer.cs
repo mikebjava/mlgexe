@@ -1,6 +1,6 @@
 ﻿namespace MLG.exe
 {
-    partial class Illuminati
+    partial class Toad
     {
         /// <summary>
         /// Required designer variable.
@@ -34,30 +34,30 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MLG.exe.Properties.Resources.illuminati;
+            this.pictureBox1.Image = global::MLG.exe.Properties.Resources.frog;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 238);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(120, 103);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
-            // Illuminati
+            // Toad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lime;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(284, 269);
+            this.ClientSize = new System.Drawing.Size(143, 129);
             this.Controls.Add(this.pictureBox1);
-            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Illuminati";
-            this.Text = "Illuminati";
+            this.Name = "Toad";
+            this.Text = "Toad";
             this.TransparencyKey = System.Drawing.Color.Lime;
-            this.Load += new System.EventHandler(this.Illuminati_Load);
+            this.Load += new System.EventHandler(this.Toad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

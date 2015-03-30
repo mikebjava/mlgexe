@@ -15,6 +15,7 @@ namespace MLG.exe
     public partial class DidYouSeeThat : Form
     {
         private int count = 0;
+        private Random r = new Random();
 
         public DidYouSeeThat()
         {
@@ -46,10 +47,37 @@ namespace MLG.exe
                     seethatagain.Visible = true;
                     break;
                 case 4:
-                    new Illuminati().ShowDialog();
+                    this.Visible = false;
+
+                    for (int i = 0; i < r.Next(10) + 10; i++)
+                    {
+                        BackgroundWorker workerToad = new BackgroundWorker();
+                        workerToad.DoWork += spawnToad;
+                        workerToad.RunWorkerAsync();
+                        BackgroundWorker workerIlluminati = new BackgroundWorker();
+                        workerIlluminati.DoWork += spawnIlluminati;
+                        workerIlluminati.RunWorkerAsync();
+                    }
+
                     break;
                 default: break;
             }
+        }
+
+        private void spawnToad(object sender, DoWorkEventArgs e)
+        {
+            new Toad().ShowDialog();
+        }
+
+        private void spawnIlluminati(object sender, DoWorkEventArgs e)
+        {
+            new Illuminati().ShowDialog();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+            
         }
     }
 }

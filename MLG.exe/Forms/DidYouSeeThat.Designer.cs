@@ -33,6 +33,7 @@
             this.seethat = new System.Windows.Forms.Label();
             this.seethatagain = new System.Windows.Forms.Label();
             this.textTimer = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // butwait
@@ -79,6 +80,10 @@
             this.textTimer.Interval = 2000;
             this.textTimer.Tick += new System.EventHandler(this.textTimer_Tick);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // DidYouSeeThat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,5 +109,6 @@
         private System.Windows.Forms.Label seethat;
         private System.Windows.Forms.Label seethatagain;
         private System.Windows.Forms.Timer textTimer;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
